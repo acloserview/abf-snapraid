@@ -5,7 +5,7 @@ Release:        3%{?dist}
 License:        GPLv3+
 Group:          Applications/System
 URL:            http://www.snapraid.it/
-Source0:         https://github.com/amadvance/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/amadvance/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  libblkid-devel
