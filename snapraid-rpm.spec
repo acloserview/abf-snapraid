@@ -6,9 +6,9 @@ License:        GPLv3+
 Group:          Applications/System
 URL:            http://www.snapraid.it/
 Source0:        https://github.com/amadvance/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:  gcc
-BuildRequires:  make
-BuildRequires:  libblkid-devel
+#BuildRequires:  gcc
+#BuildRequires:  make
+#BuildRequires:  libblkid-devel
 
 
 %description
@@ -18,17 +18,21 @@ failures. SnapRAID is mainly targeted for a home media center, with a
 lot of big files that rarely change.
 
 %prep
-%setup -q
+#%setup -q
+%autosetup
 
 %build
 %configure
-make %{?_smp_mflags}
+#make %{?_smp_mflags}
+%make_build
 
 %check
 make check
 
 %install
-make install DESTDIR=%{buildroot}
+#make install DESTDIR=%{buildroot}
+make_install DESTDIR=%{buildroot}
+
 
 %files
 %doc COPYING AUTHORS HISTORY README
