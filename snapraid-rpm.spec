@@ -11,6 +11,10 @@ Source0:        https://github.com/amadvance/%{name}/releases/download/v%{versio
 #BuildRequires:  libblkid-devel
 
 
+%patchlist
+autoreconf.patch
+autoupdate.patch
+
 %description
 SnapRAID is a backup program for disk arrays. It stores parity
 information of your data and it's able to recover from up to six disk
