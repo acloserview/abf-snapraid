@@ -28,7 +28,6 @@ lot of big files that rarely change.
 make check
 
 %install
-#make install DESTDIR=%{buildroot}
 make_install DESTDIR=%{buildroot}
 
 
